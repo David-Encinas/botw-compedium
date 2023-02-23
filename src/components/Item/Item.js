@@ -30,14 +30,14 @@ const Item = (props) => {
         {hearts_recovered ? <p><b>Hearts Recovered:</b> <span>{hearts_recovered}</span></p> : ''}
       </div> 
 
-      <div className="common_locations">
+      {common_locations && common_locations.length > 0 ? <div className="common_locations">
         <h4>Common Locations: </h4>
         <ul>
-          {common_locations ? common_locations.map((item, index)=> {return <li key={index}>{item}</li>}) : 'unknown'}              
+          {common_locations.map((item, index)=> {return <li key={index}>{item}</li>})}              
         </ul> 
-      </div>
+      </div>: ''}
 
-      {drops ? <div className="common_locations">
+      {drops && drops.length > 0 ? <div className="common_locations">
         <h4>Drops: </h4>
         <ul>
           {drops.map((item, index)=> {return <li key={index}>{item}</li>}) }              
