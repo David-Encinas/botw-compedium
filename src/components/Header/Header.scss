@@ -21,7 +21,9 @@ html body {
     background-image: url(./zelda-sheika.jpg);    
     background-repeat: no-repeat;
     background-size: contain;
-    position: relative;
+    position: sticky;    
+    top: 0;
+    background-color: #000;
     @media (max-width: 820px) {
       background-image: none;      
       h1 {
