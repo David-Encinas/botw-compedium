@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Medula+One&display=swap");
+
+$fontColor: #41cfff;
+
+@keyframes loading {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(90deg);}
+  50% {transform: rotate(180deg);}
+  75% {transform: rotate(270deg);}
+  100% {transform: rotate(360deg);}
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  font-size: 62.5%;
+  body {
+    font-size: 1.6rem;    
+    background-color: #000;
+    color: $fontColor;
+    background-image: url('../public/zelda-mm.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    header {
+      font-family: "Medula One", sans-serif;
+      letter-spacing: 3px;    
+      font-size: 2.5rem;
+    }
+    .loading {
+      min-height: 100vh;
+      min-width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: 3s infinite loading;        
+      .dot {
+        margin: 0 1.5rem;
+        background-color: $fontColor;
+        height: 2.2rem;
+        width: 2.2rem;
+        border-radius: 50%;
+      }
+    }
+    .container {
+      background-position: right center;
+      max-width: 1440px;
+      margin: 0 auto;
+      .toggle_buttons {
+        text-align: center;
+        margin: 2rem;
+        button {
+          background-color: transparent;
+          color: $fontColor;
+          text-transform: uppercase;
+          border: 1px solid $fontColor;
+          margin: 0 2rem;
+          padding: 1rem 2.5rem;
+          border-radius: 0.6rem;
+          cursor: pointer;
+          font-family: "Medula One", sans-serif;
+          letter-spacing: 3px;    
+          font-size: 2.5rem;    
+        }
+      }
+    }
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 300px;
+      text-align: center;
+      line-height: 4rem;
+      border-top: 1px solid $fontColor;
+      margin-top: 3rem;
+      background-color: rgba(0,0,0,0.9);
+      a {
+        color: $fontColor;
+        text-decoration: none;        
+      }
+    }
+  } 
+}
+
