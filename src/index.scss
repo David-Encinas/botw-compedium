@@ -27,6 +27,9 @@ html {
     background-position: top center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    @media (max-width: 790px) {
+      background-position: right;
+    }
     header {
       font-family: "Medula One", sans-serif;
       letter-spacing: 3px;    
@@ -79,7 +82,14 @@ html {
       line-height: 4rem;
       border-top: 1px solid $fontColor;
       margin-top: 3rem;
-      background-color: rgba(0,0,0,0.9);
+      background-color: rgba(0,0,0,0.6);
+      background-image: url('../public/zelda-sword.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: left;
+      @media (max-width: 790px) {
+        background-image: none;
+      }
       a {
         color: $fontColor;
         text-decoration: none;        
