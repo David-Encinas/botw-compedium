@@ -11,9 +11,7 @@ const Creatures = () => {
   const {creatures} = appData;
   if (loading) { return <Loading /> }
   if (!creatures || creatures === []) { return ( <p>Nothing here</p>)}
-  const { food, non_food } = creatures;
-
-  console.log(non_food)
+  const { food, non_food } = creatures;  
   
   let creaturesOptions = []
   Object.keys(creatures).forEach((opt) => {
