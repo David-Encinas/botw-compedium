@@ -19,7 +19,12 @@ const Header = () => {
 
   const linkClick = () => {
     setMobileMenu(false);
-    setIsActive(false)
+    setIsActive(false);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+
   }
   
   return (    
