@@ -25,12 +25,12 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        {/* <Route exact path='/' element={<Home />} />       */}
-        <Route path='/creatures' element={<Creatures />} />      
-        <Route path='/equipment' element={<Equipment />} />      
-        <Route path='/materials' element={<Materials />} />      
-        <Route path='/monsters' element={<Monsters />} />      
-        <Route path='/treasure' element={<Treasure />} />      
+        { <Route exact path='botw-compendium/' element={<Creatures />} />       }
+        <Route path='botw-compendium/creatures' element={<Creatures />} />      
+        <Route path='botw-compendium/equipment' element={<Equipment />} />      
+        <Route path='botw-compendium/materials' element={<Materials />} />      
+        <Route path='botw-compendium/monsters' element={<Monsters />} />      
+        <Route path='botw-compendium/treasure' element={<Treasure />} />      
         <Route path='*' element={<Error />} />
       </Routes>
       <Footer />

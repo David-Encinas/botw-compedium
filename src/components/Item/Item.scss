@@ -46,14 +46,20 @@ html body {
         }
         .info {
           padding: 1rem;
+          h4 {
+            margin: 0.5em 0;
+          }
           div {
             margin-bottom: 0.75rem;              
-            &.common_locations ul {
-              margin-left: 1rem;              
+            &.info-list ul {
+              margin-left: 1.5rem;              
               display: flex;
               flex-wrap: wrap;
+              justify-content: start;
               li {
                 margin: 0 0.75em;
+                text-transform: capitalize;
+                width: 40%;
               }
 
             }

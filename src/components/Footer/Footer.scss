@@ -1,0 +1,28 @@
+$fontColor: #41cfff;
+
+html body {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 300px;
+    text-align: center;
+    line-height: 4rem;
+    border-top: 1px solid $fontColor;
+    margin-top: 3rem;
+    background-color: rgba(0,0,0,0.6);
+    background-image: url('./zelda-sword.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    @media (max-width: 790px) {
+      background-image: none;
+    }
+    a {
+      color: $fontColor;
+      text-decoration: none;        
+    }
+  }
+
+}

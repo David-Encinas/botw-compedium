@@ -14,7 +14,7 @@ const Monsters = () => {
   if (!monsters || monsters === []) { return ( <p>Nothing here</p>)}  
 
   return (
-    <section className="equipment-section section container">        
+    <section className="monsters-section section container">        
     <div className="flex-items">        
       {monsters.map((item, index)=> {                               
         return <Item item={item} key={index} />

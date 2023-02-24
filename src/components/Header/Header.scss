@@ -80,6 +80,7 @@ html body {
       align-items: center;
       flex-wrap: wrap;
       transition: all ease 0.2s;
+      margin: 0.5em 0;
       @media (max-width: 670px) {
         animation: 0.2s 1 hideMobileMenu;
         position: absolute;
@@ -102,11 +103,10 @@ html body {
       }
       li {
         margin: 1rem;
-        text-transform: uppercase;
+        text-transform: uppercase;        
         a {
           text-decoration: none;
-          color: $fontColor;
-          
+          color: $fontColor;          
         }
       }
     } 

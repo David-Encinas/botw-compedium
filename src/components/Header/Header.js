@@ -35,7 +35,7 @@ const Header = () => {
         <ul className={mobileMenu ? 'show' : 'hide'}>
           {/* <li><Link to='/'>Home</Link></li> */}
           {headerLinksArray.map((link,index) => {
-            return <li key={index} className={isActive ? 'active' : ''}><Link to={`/${link}`} onClick={linkClick}>{link}</Link></li>
+            return <li key={index} className={isActive ? 'active' : ''}><Link to={`/botw-compendium/${link}`} onClick={linkClick}>{link}</Link></li>
           })}
         </ul>   
       </div>

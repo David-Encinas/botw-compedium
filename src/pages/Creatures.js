@@ -23,7 +23,7 @@ const Creatures = () => {
     setTypeCreatures(e.target.innerHTML)
     
   }
-
+  
   return (
     <section className="creatures-section section container">     
       <div className="toggle_buttons">
