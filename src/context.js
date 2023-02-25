@@ -11,7 +11,6 @@ const AppProvider = ({ children }) => {
   const [typeCreatures, setTypeCreatures] = useState('food');
   // Mobile Menu
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [isActive, setIsActive] = useState(false);
   // Search 
   const [showSearch, setShowSearch] = useState(true);
   const [isSearching, setIsSearching] = useState(false)
@@ -47,8 +46,6 @@ const AppProvider = ({ children }) => {
     typeCreatures,
     mobileMenu,
     setMobileMenu,
-    isActive,
-    setIsActive,
     showSearch,
     setShowSearch,
     isSearching,

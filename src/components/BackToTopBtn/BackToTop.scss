@@ -3,9 +3,9 @@ $fontColor: #41cfff;
 html body {
   position: relative;
   #back-to-top {
-    position: sticky;
-    left: 95%;
+    position: sticky;    
     bottom: 10px;
+    margin: 0 1rem 0 auto;
     width: min-content;
     display: block;    
     background-color: rgba(0,0,0,0.8);
