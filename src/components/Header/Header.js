@@ -7,7 +7,7 @@ import './Header.scss';
 
 const Header = () => {
 
-  const {appData, mobileMenu, setMobileMenu, isActive, setIsActive} = useGlobalContext();    
+  const {appData, mobileMenu, setMobileMenu, isActive, setIsActive, setPageLocation} = useGlobalContext();    
 
   let headerLinksArray = [];
   Object.keys(appData).forEach((links) => {
@@ -18,13 +18,15 @@ const Header = () => {
     setMobileMenu(!mobileMenu)
   }
 
-  const linkClick = () => {
+  const linkClick = (e) => {
     setMobileMenu(false);
     setIsActive(false);    
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     })
+     setPageLocation(e.target.innerText)  
+  
   }
 
   return (    

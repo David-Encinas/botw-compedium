@@ -15,8 +15,8 @@ const AppProvider = ({ children }) => {
   // Search 
   const [showSearch, setShowSearch] = useState(true);
   const [isSearching, setIsSearching] = useState(false)
-
-
+  // Page Location
+  const [pageLocation, setPageLocation] = useState();
 
   const fetchBotw = async () => {
     setLoading(true);
@@ -30,15 +30,18 @@ const AppProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
       setLoading(false);
-    }
+    }    
+    let windowLoc = window.location.pathname.split('/')[2];
+    setPageLocation( windowLoc === '' ? 'All' : windowLoc)    
   }
-
+  
   useEffect(() => {
     fetchBotw()
   }, [])
+  
 
   return <AppContext.Provider value={{
-    loading,
+    loading, 
     appData,
     setTypeCreatures,
     typeCreatures,
@@ -49,7 +52,8 @@ const AppProvider = ({ children }) => {
     showSearch,
     setShowSearch,
     isSearching,
-    setIsSearching
+    setIsSearching,
+    pageLocation, setPageLocation
   }}>{children}</AppContext.Provider>
 }
 

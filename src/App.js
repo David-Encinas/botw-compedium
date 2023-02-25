@@ -18,7 +18,7 @@ import { useGlobalContext } from './context'
 
 
 function App() { 
-  const { loading } = useGlobalContext();
+  const { loading, pageLocation } = useGlobalContext();
 
   if (loading) { return <Loading />}
 
@@ -26,7 +26,8 @@ function App() {
     <Router>
       <Header />
       <section className="section container">           
-        <Routes>        
+        <h2 className='pageLocation'>{pageLocation}</h2>
+        <Routes>                  
           <Route path='/' element={<Navigate replate to='/botw-compendium/creatures'/>}/>       
           <Route path='botw-compendium/' element={<All />} />                  
           <Route path='botw-compendium/creatures' element={<Creatures />} />      
