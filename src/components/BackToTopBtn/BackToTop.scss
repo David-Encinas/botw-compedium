@@ -1,0 +1,24 @@
+$fontColor: #41cfff;
+
+html body {
+  position: relative;
+  #back-to-top {
+    position: sticky;
+    left: 95%;
+    bottom: 10px;
+    width: min-content;
+    display: block;    
+    background-color: rgba(0,0,0,0.6);
+    button {
+      border: 1px solid $fontColor;
+      border-radius: 0.6rem;
+      padding: 1.5rem;
+      color: $fontColor;
+      background-color: transparent;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
