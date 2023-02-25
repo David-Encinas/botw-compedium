@@ -21,10 +21,16 @@ html body {
     background-image: url(./zelda-sheika.jpg);    
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: 100px;
     position: sticky;    
     top: 0;
     background-color: #000;
-    @media (max-width: 820px) {
+    z-index: 9999;
+    font-family: "Medula One", sans-serif;
+    letter-spacing: 3px;    
+    font-size: 2.5rem;
+
+    @media (max-width: 1180px) {
       background-image: none;      
       h1 {
         font-size: 3rem;
@@ -63,6 +69,7 @@ html body {
       }
       &.show {
         background-color: transparent;
+        
         &::before {
           transform: rotate(45deg);
           top: 0;
@@ -93,6 +100,8 @@ html body {
           flex-direction: column;
           animation: 0.2s 1 showMobileMenu;
           transform: scale(1);          
+          margin-top: 0.1rem;
+
         }
         
         &.hide {
@@ -110,5 +119,17 @@ html body {
         }
       }
     } 
+
+    .search-btn {
+      background-color: transparent;
+      border: none;
+      color: $fontColor;
+      font-size: 2rem;
+      font-family: inherit;
+      font-size: inherit;
+      letter-spacing: inherit;
+      text-transform: inherit;
+      cursor: pointer;
+    }
   }
 }

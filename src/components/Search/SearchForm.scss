@@ -1,0 +1,44 @@
+$fontColor: #41cfff;
+
+
+html body {
+  .search-form {
+    margin: 2rem auto;
+    .relative-div {
+      position: relative;
+      max-width: 75rem;
+      width: 90%;      
+      margin: 1rem auto;
+      z-index: 1;
+      input {
+        background-color: transparent;
+        border: none;
+        padding: 1rem;
+        border-bottom: 1px solid $fontColor;        
+        width: 100%;
+        font-size: 1.6rem;
+        color: $fontColor;
+        &::placeholder {
+          color: $fontColor;
+        }
+        &:focus, &:active {
+          outline: none;
+          border-bottom: 2px solid $fontColor;
+        }
+      }
+      .searchIcon, .clearSearch {
+        background-color: transparent;
+        border: none;
+        color: $fontColor;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 2.5rem;
+        padding: 0;
+      }
+      .clearSearch {
+        cursor: pointer;
+      }
+    }
+  }
+}

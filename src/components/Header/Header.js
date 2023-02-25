@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useGlobalContext } from "../../context";
 import { Link } from 'react-router-dom';
 
@@ -19,25 +20,24 @@ const Header = () => {
 
   const linkClick = () => {
     setMobileMenu(false);
-    setIsActive(false);
+    setIsActive(false);    
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     })
-
   }
-  
+
   return (    
     <header>
       <div className="container">
         <h1>Hyrule Compendium API</h1>
         <button className={mobileMenu ? 'show mobile' : 'hide mobile'} onClick={showMobileMenu}></button>
-        <ul className={mobileMenu ? 'show' : 'hide'}>
-          {/* <li><Link to='/'>Home</Link></li> */}
+        <ul className={mobileMenu ? 'show' : 'hide'}>          
+          <li className={isActive ? 'active' : ''}><Link to={`/botw-compendium/`} onClick={linkClick}>all</Link></li>
           {headerLinksArray.map((link,index) => {
             return <li key={index} className={isActive ? 'active' : ''}><Link to={`/botw-compendium/${link}`} onClick={linkClick}>{link}</Link></li>
           })}
-        </ul>   
+        </ul>        
       </div>
     </header>
   )
