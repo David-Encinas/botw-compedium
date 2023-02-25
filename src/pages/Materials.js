@@ -10,16 +10,14 @@ const Materials = () => {
   const { materials } = appData;
   
   if (loading) { return <Loading /> }
-  if (!materials || materials === []) { return ( <p>Nothing here</p>)}
+  if (!materials || materials === {}) { return ( <p>Nothing here</p>)}
   
   return (
-    <section className="section container materials-section">
       <div className="flex-items">
         {materials.map((item, index) => {          
           return  <Item item={item} key={index}/>
         })}
       </div>
-    </section>
   )
 }
 

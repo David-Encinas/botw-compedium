@@ -13,14 +13,12 @@ const Treasure = () => {
 
 
   return (
-    <section className="treasure-section section container">        
     <div className="flex-items">        
       {treasure.map((item, index)=> {                               
         return <Item item={item} key={index} />
         })}
 
     </div>
-  </section>
 
   )
 }

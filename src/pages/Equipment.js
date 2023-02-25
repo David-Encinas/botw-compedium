@@ -14,14 +14,13 @@ const Equipment = () => {
   if (!equipment || equipment === []) { return ( <p>Nothing here</p>)}
 
   return (
-    <section className="equipment-section section container">        
-      <div className="flex-items">        
+      <div className="flex-items equipment-section">        
         {equipment.map((item, index)=> {                               
           return <Item item={item} key={index} />
           })}
 
       </div>
-    </section>
+
   )
 }
 

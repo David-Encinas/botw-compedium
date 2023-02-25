@@ -3,11 +3,9 @@ import React from "react"
 const Error = () => {
 
   return (
-    <section className="section container error-section">
-    <div className="flex-items">
+    <div className="flex-items error-section">
         <h1>Nothing can be found here.</h1>
-    </div>
-    </section>
+    </div>    
   )
 }
 
